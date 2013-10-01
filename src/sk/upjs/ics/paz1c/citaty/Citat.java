@@ -85,6 +85,11 @@ public class Citat {
         }
         return true;
     }
+
+    @Override
+    public String toString() {
+        return this.text + " (" + this.autor + ")";
+    }
   
     
 }
