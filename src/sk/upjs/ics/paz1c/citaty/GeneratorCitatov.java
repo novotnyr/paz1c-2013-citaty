@@ -7,7 +7,7 @@ public class GeneratorCitatov {
     private CitatyDao citatyDao = new CitatyDao();
     
     public Citat vygenerujCitat() {
-        List<Citat> vsetkyCitaty = citatyDao.list();
+        List<Citat> vsetkyCitaty = citatyDao.vratVsetky();
         
         Random random = new Random();
         int nahodnyIndex 

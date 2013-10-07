@@ -29,8 +29,6 @@ public class CitatyDao {
         citat2.setDatum(new Date());
         
         citaty.add(citat2);
-        
-    
     }
     
     
@@ -62,15 +60,15 @@ public class CitatyDao {
     }
     */
 
-    public void save(Citat citat) {
+    public void pridaj(Citat citat) {
         this.citaty.add(citat);
     }
 
-    List<Citat> list() {
+    public List<Citat> vratVsetky() {
         return new ArrayList<>(this.citaty);
     }
 
-    List<Citat> najdiPodlaKlucovehoSlova(String dopyt) {
+    public List<Citat> najdiPodlaKlucovehoSlova(String dopyt) {
         
         List<Citat> najdeneCitaty = new ArrayList<>();
         for (Citat citat : citaty) {

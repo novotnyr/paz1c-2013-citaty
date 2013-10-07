@@ -28,7 +28,7 @@ public class CitatyDaoTest {
         citat1.setZdroj("Kto chyta v zite");
         citat1.setDatum(new Date());
         
-        citatyDao.save(citat1);        
+        citatyDao.pridaj(citat1);        
     }
     
     @Test

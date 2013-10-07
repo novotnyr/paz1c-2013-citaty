@@ -19,7 +19,7 @@ public class ZoznamCitatovForm extends javax.swing.JFrame {
      */
     public ZoznamCitatovForm() {
         initComponents();
-        List<Citat> citaty = citatyDao.list();
+        List<Citat> citaty = citatyDao.vratVsetky();
         Object[] citatyPole = citaty.toArray();
         lstCitaty.setListData(citatyPole);
     }
