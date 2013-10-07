@@ -12,7 +12,7 @@ package sk.upjs.ics.paz1c.citaty;
 public class CitatForm extends javax.swing.JFrame {
     // private CitatyDao citatyDao = new CitatyDao();
     
-    private GeneratorCitatov generatorCitatov = new GeneratorCitatov();
+    private GeneratorCitatov generatorCitatov = new DefaultGeneratorCitatov();
     
     /**
      * Creates new form CitatForm

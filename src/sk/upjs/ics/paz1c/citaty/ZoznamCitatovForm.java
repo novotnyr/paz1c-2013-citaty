@@ -12,7 +12,7 @@ import java.util.List;
  * @author rn
  */
 public class ZoznamCitatovForm extends javax.swing.JFrame {
-    private CitatyDao citatyDao = new CitatyDao();
+    private CitatDao citatyDao = new SuborovyCitatDao();
     
     /**
      * Creates new form ZoznamCitatovForm

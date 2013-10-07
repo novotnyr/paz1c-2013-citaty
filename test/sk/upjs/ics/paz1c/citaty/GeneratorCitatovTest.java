@@ -7,7 +7,7 @@ public class GeneratorCitatovTest {
 
     @Test
     public void testVygenerujCitat() {
-        GeneratorCitatov generatorCitatov = new GeneratorCitatov();
+        DefaultGeneratorCitatov generatorCitatov = new DefaultGeneratorCitatov();
         Citat citat = generatorCitatov.vygenerujCitat();
         System.out.println(citat);
         assertNotNull(citat);

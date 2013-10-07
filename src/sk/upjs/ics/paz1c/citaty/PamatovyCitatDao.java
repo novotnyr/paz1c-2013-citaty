@@ -2,16 +2,14 @@ package sk.upjs.ics.paz1c.citaty;
 
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Date;
-import java.util.Iterator;
 import java.util.List;
 
-public class CitatyDao {
+public class PamatovyCitatDao implements CitatDao {
 
     private List<Citat> citaty = new ArrayList<>();
 
-    public CitatyDao() {
+    public PamatovyCitatDao() {
         Citat citat1 = new Citat();
         citat1.setId(1);
         citat1.setAutor("J. D. Salinger");
@@ -31,8 +29,6 @@ public class CitatyDao {
         citaty.add(citat2);
     }
     
-    
-
     public Citat najdiPodlaId(Integer id) {
         for (Citat citat : this.citaty) {
             if (citat.getId().equals(id)) {
@@ -40,7 +36,9 @@ public class CitatyDao {
             }
         }
         return null;
-    }
+    }    
+
+
 
     public List<Citat> najdiPodlaAutora(String autor) {
         List<Citat> najdeneCitaty = new ArrayList<>();
@@ -61,6 +59,11 @@ public class CitatyDao {
     */
 
     public void pridaj(Citat citat) {
+        for (Citat c : citaty) {
+            if(c.getId().equals(citat.getId())) {
+                throw new DuplicitnyCitatException(citat);
+            }
+        }
         this.citaty.add(citat);
     }
 
