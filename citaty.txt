@@ -1,3 +1,3 @@
-ï»¿1	Å½ijem	J. D. Salinger	Kto chytÃ¡ v Å¾ite
-2	ByÅ¥ Äi nebyÅ¥	W. Shakespeare	Hamlet
-3	MalÃ½ krok pre Äloveka, ale veÄ¾kÃ½ pre Ä¾udstvo	N. Armstrong	Mesiac
+1	ijem	J. D. Salinger	Kto chytá v ite
+2	By èi neby	W. Shakespeare	Hamlet
+3	Malı krok pre èloveka, ale ve¾kı pre ¾udstvo	N. Armstrong	Mesiac

@@ -30,7 +30,7 @@ public class SuborovyCitatDao implements CitatDao {
     public List<Citat> vratVsetky() {
         List<Citat> citaty = new ArrayList<>();
         try {
-            Scanner scanner = new Scanner(new File(SUBOR_S_CITATMI));
+            Scanner scanner = new Scanner(new File(SUBOR_S_CITATMI), "windows-1250");
             while(scanner.hasNextLine()) {
                 String riadok = scanner.nextLine();
                 Citat citat = new Citat();

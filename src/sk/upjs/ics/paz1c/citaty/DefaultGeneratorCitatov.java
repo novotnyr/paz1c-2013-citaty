@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Random;
 
 public class DefaultGeneratorCitatov implements GeneratorCitatov {
-    private CitatDao citatyDao = new SuborovyCitatDao();
+    private CitatDao citatyDao = CitatDaoFactory.INSTANCE.getCitatDao();
     
     @Override
     public Citat vygenerujCitat() {

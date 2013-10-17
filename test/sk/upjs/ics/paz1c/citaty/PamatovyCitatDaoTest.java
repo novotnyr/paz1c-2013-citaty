@@ -7,7 +7,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Before;
 
-public class CitatyDaoTest {
+public class PamatovyCitatDaoTest {
     private int ukazkoveId = 3;
     
     private String ukazkovyAutor = "J. D. Salinger";
@@ -50,6 +50,11 @@ public class CitatyDaoTest {
         }
     }
             
-            
+    @Test
+    public void testVratVsetkych() {
+        List<Citat> citaty = citatyDao.vratVsetky();
+        assertEquals(3, citaty.size());
+        
+    }
             
 }
