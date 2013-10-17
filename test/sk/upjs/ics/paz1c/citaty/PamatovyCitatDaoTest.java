@@ -1,25 +1,24 @@
 package sk.upjs.ics.paz1c.citaty;
 
 import sk.upjs.ics.paz1c.citaty.Citat;
-import sk.upjs.ics.paz1c.citaty.CitatyDao;
 import java.util.Date;
 import java.util.List;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Before;
 
-public class CitatyDaoTest {
-    private int ukazkoveId = 2;
+public class PamatovyCitatDaoTest {
+    private int ukazkoveId = 3;
     
     private String ukazkovyAutor = "J. D. Salinger";
     
-    private CitatyDao citatyDao;
+    private CitatDao citatyDao;
     
     private Citat citat1;
     
     @Before
     public void setUp() {
-        citatyDao = new CitatyDao();
+        citatyDao = new PamatovyCitatDao();
         
         citat1 = new Citat();
         citat1.setId(ukazkoveId);
@@ -28,7 +27,7 @@ public class CitatyDaoTest {
         citat1.setZdroj("Kto chyta v zite");
         citat1.setDatum(new Date());
         
-        citatyDao.save(citat1);        
+        citatyDao.pridaj(citat1);        
     }
     
     @Test
@@ -51,6 +50,11 @@ public class CitatyDaoTest {
         }
     }
             
-            
+    @Test
+    public void testVratVsetkych() {
+        List<Citat> citaty = citatyDao.vratVsetky();
+        assertEquals(3, citaty.size());
+        
+    }
             
 }
