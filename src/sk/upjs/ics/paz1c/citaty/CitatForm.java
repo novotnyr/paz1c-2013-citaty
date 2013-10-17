@@ -10,7 +10,9 @@ package sk.upjs.ics.paz1c.citaty;
  * @author rn
  */
 public class CitatForm extends javax.swing.JFrame {
-    private CitatyDao citatyDao = new CitatyDao();
+    // private CitatyDao citatyDao = new CitatyDao();
+    
+    private GeneratorCitatov generatorCitatov = new DefaultGeneratorCitatov();
     
     /**
      * Creates new form CitatForm
@@ -18,8 +20,10 @@ public class CitatForm extends javax.swing.JFrame {
     public CitatForm() {
         initComponents();
         
-        int ukazkoveId = 1;
-        Citat citat = citatyDao.najdiPodlaId(ukazkoveId);
+        // int ukazkoveId = 1;
+        // Citat citat = citatyDao.najdiPodlaId(ukazkoveId);
+        Citat citat = generatorCitatov.vygenerujCitat();
+        
         lblText.setText(citat.getText());
         lblAutor.setText(citat.getAutor());
     }
