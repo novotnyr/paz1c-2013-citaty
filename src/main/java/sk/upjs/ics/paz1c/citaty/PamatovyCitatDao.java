@@ -7,7 +7,7 @@ import java.util.List;
 
 public class PamatovyCitatDao implements CitatDao {
 
-    private List<Citat> citaty = new ArrayList<>();
+    private List<Citat> citaty = new ArrayList<Citat>();
 
     public PamatovyCitatDao() {
         Citat citat1 = new Citat();
@@ -41,7 +41,7 @@ public class PamatovyCitatDao implements CitatDao {
 
 
     public List<Citat> najdiPodlaAutora(String autor) {
-        List<Citat> najdeneCitaty = new ArrayList<>();
+        List<Citat> najdeneCitaty = new ArrayList<Citat>();
         for(Citat citat : this.citaty) {
             if(citat.getAutor().equals(autor)) {
                 najdeneCitaty.add(citat);
@@ -68,12 +68,12 @@ public class PamatovyCitatDao implements CitatDao {
     }
 
     public List<Citat> vratVsetky() {
-        return new ArrayList<>(this.citaty);
+        return new ArrayList<Citat>(this.citaty);
     }
 
     public List<Citat> najdiPodlaKlucovehoSlova(String dopyt) {
         
-        List<Citat> najdeneCitaty = new ArrayList<>();
+        List<Citat> najdeneCitaty = new ArrayList<Citat>();
         for (Citat citat : citaty) {
             if(citat.getText().contains(dopyt)
                     || citat.getAutor().contains(dopyt)

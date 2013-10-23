@@ -8,7 +8,7 @@ import static org.junit.Assert.*;
 import sk.upjs.ics.paz1c.citaty.Citat;
 import sk.upjs.ics.paz1c.citaty.CitatDao;
 import sk.upjs.ics.paz1c.citaty.CitatDaoFactory;
-import sk.upjs.ics.paz1c.citaty.MySqlCitatDao;
+import sk.upjs.ics.paz1c.citaty.SqlCitatDao;
 
 /**
  *
