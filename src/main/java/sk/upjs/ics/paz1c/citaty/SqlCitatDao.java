@@ -5,7 +5,7 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 
-public class MySqlCitatDao implements CitatDao {
+public class SqlCitatDao implements CitatDao {
     private JdbcTemplate jdbcTemplate = JdbcTemplateFactory.INSTANCE.getJdbcTemplate();
 
     @Override

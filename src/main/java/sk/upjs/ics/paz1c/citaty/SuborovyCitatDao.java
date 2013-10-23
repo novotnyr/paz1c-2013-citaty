@@ -28,7 +28,7 @@ public class SuborovyCitatDao implements CitatDao {
 
     @Override
     public List<Citat> vratVsetky() {
-        List<Citat> citaty = new ArrayList<>();
+        List<Citat> citaty = new ArrayList<Citat>();
         try {
             Scanner scanner = new Scanner(new File(SUBOR_S_CITATMI), "windows-1250");
             while(scanner.hasNextLine()) {
